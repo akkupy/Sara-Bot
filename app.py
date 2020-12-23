@@ -1,7 +1,7 @@
 # import everything
 from flask import Flask, request
 import telegram
-from Telebot.credentials import bot_token, bot_user_name,Url
+from Telebot.credentials import bot_token, bot_user_name,URL
 global bot
 global TOKEN
 TOKEN = bot_token
@@ -49,7 +49,7 @@ def respond():
 
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
-   s = bot.setWebhook('{URL}{HOOK}'.format(URL=Url, HOOK=TOKEN))
+   s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
    if s:
        return "webhook setup ok"
    else:
