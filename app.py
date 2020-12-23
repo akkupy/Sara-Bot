@@ -29,8 +29,7 @@ def respond():
        Heyy I'm Sara, Created By Akku-tech @Akku_Legend  
        """
        # send the welcoming message
-       bot.sendChatAction(chat_id=chat_id, action="typing")
-       sleep(1.5)
+       bot.sendChatAction(chat_id=chat_id, action="typing",sleep(1.5))
        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
 
 
