@@ -1,3 +1,3 @@
-bot_token = "1443385005:AAHTRaWuiI-ioqXoCMh1XhhD40Vccz17NCU"
-bot_user_name = "SaraAkkuBot"
+bot_token = "1404713517:AAEIaC1DFvsHKz09olM-8iAWgYzDiIGTBQM"
+bot_user_name = "Akku_Peace_Bot"
 URL = "https://akkupeacebot.herokuapp.com/"
