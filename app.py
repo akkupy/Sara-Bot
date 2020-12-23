@@ -26,7 +26,8 @@ def respond():
    if text == "/start":
        # print the welcoming message
        bot_welcome = """
-       Heyy I'm Sara, Created By Akku-tech @Akku_Legend  """
+       Heyy I'm Sara, Created By Akku-tech @Akku_Legend  
+       """
        # send the welcoming message
        bot.sendChatAction(chat_id=chat_id, action="typing")
        sleep(1.5)
