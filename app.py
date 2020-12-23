@@ -1,6 +1,6 @@
-# import everything
-from flask import Flask, request
+# importing
 import telegram
+from flask import Flask, request
 from Telebot.credentials import bot_token, bot_user_name,URL
 global bot
 global TOKEN
