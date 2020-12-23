@@ -57,7 +57,7 @@ def set_webhook():
 
 @app.route('/')
 def index():
-   return '.'
+   return 'heyyy'
 
 
 if __name__ == '__main__':
