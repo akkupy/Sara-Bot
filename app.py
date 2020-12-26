@@ -1,6 +1,7 @@
 # importing
 import telegram
 from flask import Flask, request
+from Telebot.Wiki import wiki
 from Telebot.credentials import bot_token, bot_user_name,URL
 global bot
 global TOKEN
@@ -34,6 +35,11 @@ def respond():
        # send the welcoming message
        bot.sendChatAction(chat_id=chat_id, action="typing")
        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+
+    if text[0:5] == "/wiki":
+        Wiki=wiki(text[6:])
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendMessage(chat_id=chat_id, text=Wiki, reply_to_message_id=msg_id)
 
 
    #else:
