@@ -42,12 +42,18 @@ def respond():
         bot.sendMessage(chat_id=chat_id, text=Wiki, reply_to_message_id=msg_id)
 
     if text[0:9] == "/yt_music":
-        yt_image,dir,capy=yt_music(text[10:])
+        bot_welcome = """
+               Heyy I'm Sara, Created By Akku-tech @Akku_Legend  
+               """
+        # send the welcoming message
         bot.sendChatAction(chat_id=chat_id, action="typing")
-        bot.sendAudio(audio=dir,thumb=yt_image,caption=capy,chat_id=chat_id,reply_to_message_id=msg_id )
-        for files in (dir, yt_image):
-            if files and os.path.exists(files):
-                os.remove(files)
+        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+        #yt_image,dir,capy=yt_music(text[10:])
+        #bot.sendChatAction(chat_id=chat_id, action="typing")
+        #bot.sendAudio(audio=dir,thumb=yt_image,caption=capy,chat_id=chat_id,reply_to_message_id=msg_id )
+        #for files in (dir, yt_image):
+            #if files and os.path.exists(files):
+                #os.remove(files)
     # else:
     # try:
     # clear the message we got from any non alphabets
