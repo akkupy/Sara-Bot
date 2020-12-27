@@ -41,12 +41,12 @@ def respond():
 
     if text == "/notes":
         bot_notes = """
-               Here Are The List Of Features Currently I Have...
+               Here Are The List Of Features Currently I Have.
                Type in /<Command> To get the desired result.
                
                
                -wiki <Name> : Search The Wikipedia About Anything
-               -yt_music <Name> : Search For any YT Video Link and/or Any YT Audio(music)
+               -yt_music <Name> : YT Mp3 Music Converter
                More Are On the way!
                
                Admin:@Akku_Legend   
