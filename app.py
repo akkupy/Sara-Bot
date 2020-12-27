@@ -2,6 +2,7 @@
 import telegram
 from flask import Flask, request
 from Telebot.Wiki import wiki
+from Telebot.Yt_music import yt_music
 from Telebot.credentials import bot_token, bot_user_name, URL
 
 global bot
@@ -35,12 +36,18 @@ def respond():
         # send the welcoming message
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
-
     if text[0:5] == "/wiki":
         Wiki = wiki(text[6:])
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=Wiki, reply_to_message_id=msg_id)
 
+    if text[0:9] == "/yt_music":
+        yt_image,dir,capy=yt_music(text[10:])
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendAudio(audio=dir,thumb=yt_image,caption=capy,chat_id=chat_id,reply_to_message_id=msg_id )
+        for files in (dir, yt_image):
+            if files and os.path.exists(files):
+                os.remove(files)
     # else:
     # try:
     # clear the message we got from any non alphabets
