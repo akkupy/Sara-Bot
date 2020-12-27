@@ -45,9 +45,9 @@ def respond():
         yt_image,dir,capy=yt_music(text[10:])
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.send_audio(audio=open(dir,'rb'),thumb=yt_image,caption=capy,chat_id=chat_id,reply_to_message_id=msg_id)
-        #for files in (dir, yt_image):
-            #if files and os.path.exists(files):
-                #os.remove(files)
+        for files in (dir, yt_image):
+            if files and os.path.exists(files):
+                os.remove(files)
     # else:
     # try:
     # clear the message we got from any non alphabets
