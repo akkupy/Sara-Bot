@@ -33,10 +33,27 @@ def respond():
         # print the welcoming message
         bot_welcome = """
        Heyy I'm Sara, Created By Akku-tech @Akku_Legend  
+       Type in /notes to know my True Potential!!!
        """
         # send the welcoming message
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+
+    if text == "/notes":
+        bot_notes = """
+               Here Are The List Of Features Currently I Have...
+               Type in /<Command> To get the desired result.
+               
+               
+               -wiki <Name> : Search The Wikipedia About Anything
+               -yt_music <Name> : Search For any YT Video Link and/or Any YT Audio(music)
+               More Are On the way!
+               
+               Admin:@Akku_Legend   
+               """
+        # sending notes
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendMessage(chat_id=chat_id, text=bot_notes, reply_to_message_id=msg_id)
     if text[0:5] == "/wiki":
         Wiki = wiki(text[6:])
         bot.sendChatAction(chat_id=chat_id, action="typing")
