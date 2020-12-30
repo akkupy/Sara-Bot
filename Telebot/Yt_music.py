@@ -1,6 +1,7 @@
 from youtubesearchpython import VideosSearch
 import os
 import wget
+import glob
 import youtube_dl
 
 
@@ -24,21 +25,28 @@ def yt_music(song_name):
     if not os.path.isdir("./music/"):
         os.makedirs("./music/")
     yt_song = (
-            f'youtube-dl --force-ipv4 -q -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k '
+            f'youtube-dl --force-ipv4 -q -o "./music/{yt_title}.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k '
             + yt_url
     )
 
     os.system(yt_song)
-    dir = f"./music/{yt_title}.mp3"
-    dir1 = f"./music/{yt_title}.webm"
+    try:
+        a=glob.glob("./music/*.webm")
+        b=a[0]
+        c=b[8:]
+    except:
+        a = glob.glob("./music/*.mp3")
+        b = a[0]
+        c = b[8:]
+    dir = f"./music/{c}"
+    dir1 = f"./music/{c}"
     capy = f"**Song Name ➠** `{yt_title}` \n**Published On ➠** `{yt_pub_time}` \n**Duration ➠** `{yt_duration}` \n**Link ➠** `{yt_url}`"
-
     if os.path.exists(dir):
         return yt_image, dir, capy
     elif os.path.exists(dir1):
         return yt_image, dir1, capy
     else:
-        return "Somethings Wrong!"
+        return "Somethings Wrong!","Please Try Again" ,"ee"
 
 
 
