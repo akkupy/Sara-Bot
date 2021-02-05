@@ -2,10 +2,10 @@
 import os
 import telegram
 from flask import Flask, request
-from Telebot.Intro_Notes import intro, note
-from Telebot.Wiki import wiki
-from Telebot.Yt_music import yt_music
-from Telebot.credentials import bot_token, bot_user_name, URL
+from Modules.Intro_Notes import intro, note
+from Modules.Wiki import wiki
+from Modules.Yt_music import yt_music
+from Modules.credentials import bot_token, bot_user_name, URL
 
 global bot
 global TOKEN
