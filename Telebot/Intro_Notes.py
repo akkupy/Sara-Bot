@@ -1,5 +1,5 @@
 def intro():
-    a='''Heyy I'm Sara, Created By Akku-tech @Akku_Legend " 
+    a='''Heyy I'm Sara, Created By AkkuPY @Akku_Legend " 
 Type in /notes to know my True Potential!!!'''
     return a
 
