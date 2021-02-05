@@ -2,6 +2,7 @@
 import os
 import telegram
 from flask import Flask, request
+from Telebot.Intro_Notes import intro, note
 from Telebot.Wiki import wiki
 from Telebot.Yt_music import yt_music
 from Telebot.credentials import bot_token, bot_user_name, URL
@@ -31,26 +32,17 @@ def respond():
     # Welcoming Message
     if text == "/start":
         # print the welcoming message
-        bot_welcome = """
-       Heyy I'm Sara, Created By Akku-tech @Akku_Legend  
-       Type in /notes to know my True Potential!!!
-       """
+        bot_welcome = intro()
+
+
         # send the welcoming message
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
 
     if text == "/notes":
-        bot_notes = """
-               Here Are The List Of Features Currently I Have.
-               Type in /<Command> To get the desired result.
-               
-               
-               -wiki <Name> : Search The Wikipedia About Anything
-               -yt_music <Name> : YT Mp3 Music Converter
-               More Are On the way!
-               
-               Admin:@Akku_Legend   
-               """
+        bot_notes = note()
+
+
         # sending notes
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=bot_notes, reply_to_message_id=msg_id)
