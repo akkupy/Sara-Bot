@@ -5,11 +5,10 @@ from flask import Flask, request
 from Modules.Intro_Notes import intro, note
 from Modules.Wiki import wiki
 from Modules.Yt_music import yt_music
-from Modules.credentials import credentials
-
+from Modules.credentials import *
 global bot
 global TOKEN
-TOKEN = credentials.bot_token
+TOKEN = bot_token
 bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
@@ -76,7 +75,7 @@ def respond():
 
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
-    s = bot.setWebhook('{URL}{HOOK}'.format(URL=credentials.URL, HOOK=TOKEN))
+    s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
     if s:
         return "webhook setup ok"
     else:
