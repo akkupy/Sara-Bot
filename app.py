@@ -5,17 +5,17 @@ from flask import Flask, request
 from Modules.Intro_Notes import intro, note
 from Modules.Wiki import wiki
 from Modules.Yt_music import yt_music
-from Modules.credentials import bot_token, bot_user_name, URL
+from Modules.credentials import credentials
 
 global bot
 global TOKEN
-TOKEN = bot_token
+TOKEN = credentials.bot_token
 bot = telegram.Bot(token=TOKEN)
 
-main = Flask(__name__)
+app = Flask(__name__)
 
 
-@main.route('/{}'.format(TOKEN), methods=['POST'])
+@app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
     # Retrieve the message in JSON and then transform it to Telegram object
     update = telegram.Update.de_json(request.get_json(force=True), bot)
@@ -74,16 +74,16 @@ def respond():
     return 'ok'
 
 
-@main.route('/set_webhook', methods=['GET', 'POST'])
+@app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
-    s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
+    s = bot.setWebhook('{URL}{HOOK}'.format(URL=credentials.URL, HOOK=TOKEN))
     if s:
         return "webhook setup ok"
     else:
         return "webhook setup failed"
 
 
-@main.route('/')
+@app.route('/')
 def index():
     return 'Sara Is Alive :)'
 
