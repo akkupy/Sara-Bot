@@ -11,10 +11,10 @@ global TOKEN
 TOKEN = bot_token
 bot = telegram.Bot(token=TOKEN)
 
-app = Flask(__name__)
+main = Flask(__name__)
 
 
-@app.route('/{}'.format(TOKEN), methods=['POST'])
+@main.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
     # Retrieve the message in JSON and then transform it to Telegram object
     update = telegram.Update.de_json(request.get_json(force=True), bot)
@@ -73,7 +73,7 @@ def respond():
     return 'ok'
 
 
-@app.route('/set_webhook', methods=['GET', 'POST'])
+@main.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
     if s:
@@ -82,7 +82,7 @@ def set_webhook():
         return "webhook setup failed"
 
 
-@app.route('/')
+@main.route('/')
 def index():
     return 'Sara Is Alive :)'
 
