@@ -7,8 +7,6 @@ from Modules.Wiki import wiki
 from Modules.Yt_music import yt_music
 from Modules.credentials import *
 
-
-
 global bot
 global TOKEN
 TOKEN = bot_token
@@ -16,54 +14,49 @@ bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
 
+
 class Reply:
-    def __init__(self,chat_id,message_id,message):
-        self.chat_id=chat_id
-        self.message_id=message_id
-        self.message=message
+    def __init__(self, chat_id, message_id, message,cmd):
+        self.chat_id = chat_id
+        self.message_id = message_id
+        self.message = message
+        self.cmd=cmd
+
     def para(self):
-        bot_welcome=intro()
+        bot_welcome = cmd
         bot.sendChatAction(chat_id=self.chat_id, action="typing")
         bot.sendMessage(chat_id=self.chat_id, text=bot_welcome, reply_to_message_id=self.message_id)
 
 
-
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
-
     update = telegram.Update.de_json(request.get_json(force=True), bot)
 
     chat_id = update.message.chat.id
     msg_id = update.message.message_id
     text = update.message.text.encode('utf-8').decode()
 
-
-    # Welcoming Message
     if text == "/start":
-        welcome=Reply(chat_id,msg_id,text)
+        welcome = Reply(chat_id, msg_id, text,intro())
         welcome.para()
-        #bot_welcome = intro()
-
-        #bot.sendChatAction(chat_id=chat_id, action="typing")
-        #bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
 
     if text == "/notes":
+        n#t=Reply(chat_id,msg_id,text)
 
         bot_notes = note()
 
-
-        # sending notes
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=bot_notes, reply_to_message_id=msg_id)
+
     if text[0:5] == "/wiki":
         Wiki = wiki(text[6:])
         bot.sendChatAction(chat_id=chat_id, action="typing")
         bot.sendMessage(chat_id=chat_id, text=Wiki, reply_to_message_id=msg_id)
 
     if text[0:9] == "/yt_music":
-        yt_image,dir,capy=yt_music(text[10:])
+        yt_image, dir, capy = yt_music(text[10:])
         bot.sendChatAction(chat_id=chat_id, action="typing")
-        bot.send_audio(audio=open(dir,'rb'),thumb=yt_image,caption=capy,chat_id=chat_id,reply_to_message_id=msg_id)
+        bot.send_audio(audio=open(dir, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id, reply_to_message_id=msg_id)
         os.remove(yt_image)
         os.remove(dir)
     # else:
