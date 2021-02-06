@@ -43,13 +43,13 @@ def yt_music(song_name,chat_id,msg_id,bot):
         dir1 = f"./music/{c}"
         capy = f"**Song Name ➠** `{yt_title}` \n**Published On ➠** `{yt_pub_time}` \n**Duration ➠** `{yt_duration}` \n**Link ➠** `{yt_url}`"
         if os.path.exists(dir):
-            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
+            bot.sendChatAction(chat_id=chat_id, action="upload_audio")
             bot.send_audio(audio=open(dir, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
                            reply_to_message_id=msg_id)
             os.remove(yt_image)
             os.remove(dir)
         elif os.path.exists(dir1):
-            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
+            bot.sendChatAction(chat_id=chat_id, action="upload_audio")
             bot.send_audio(audio=open(dir1, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
                            reply_to_message_id=msg_id)
             os.remove(yt_image)
