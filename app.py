@@ -55,9 +55,6 @@ def respond():
         # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
         # bot.sendPhoto(chat_id=chat_id, photo=url, reply_to_message_id=msg_id)
 
-        else:
-            bot.sendMessage(chat_id=chat_id, text="Command is Wrong...Retry", reply_to_message_id=msg_id)
-
         return 'ok'
     except:
         bot.sendMessage(chat_id=chat_id, text="Something Fishy.. Give another Try", reply_to_message_id=msg_id)
