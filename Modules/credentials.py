@@ -1,3 +1,5 @@
-bot_token = "1404713517:AAEIaC1DFvsHKz09olM-8iAWgYzDiIGTBQM"
-bot_user_name = "Akku_Peace_Bot"
-URL = "https://akkupeacebot.herokuapp.com/"
+import os
+
+bot_token = os.environ.get("bot_token",None)
+bot_user_name = os.environ.get("bot_username",None)
+URL = os.environ.get("URL",None)
