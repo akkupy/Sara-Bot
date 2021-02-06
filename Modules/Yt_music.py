@@ -43,7 +43,7 @@ def yt_music(song_name,chat_id,msg_id,bot):
         dir1 = f"./music/{c}"
         capy = f"**Song Name ➠** `{yt_title}` \n**Published On ➠** `{yt_pub_time}` \n**Duration ➠** `{yt_duration}` \n**Link ➠** `{yt_url}`"
         if os.path.exists(dir):
-            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
             bot.send_audio(audio=open(dir, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
                            reply_to_message_id=msg_id)
             os.remove(yt_image)
@@ -55,8 +55,8 @@ def yt_music(song_name,chat_id,msg_id,bot):
             os.remove(yt_image)
             os.remove(dir1)
         else:
-            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
-            bot.sendMessage(chat_id=chat_id, text="Demn", reply_to_message_id=msg_id)
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendMessage(chat_id=chat_id, text="Try Again", reply_to_message_id=msg_id)
 
     except:
         bot.sendChatAction(chat_id=chat_id, action="typing")
