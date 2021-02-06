@@ -5,7 +5,7 @@ import glob
 import youtube_dl
 
 
-def yt_music(song_name):
+def yt_music(song_name,chat_id,msg_id,bot):
     try:
         videosSearch = VideosSearch(song_name, limit=1)
 
@@ -43,11 +43,20 @@ def yt_music(song_name):
         dir1 = f"./music/{c}"
         capy = f"**Song Name ➠** `{yt_title}` \n**Published On ➠** `{yt_pub_time}` \n**Duration ➠** `{yt_duration}` \n**Link ➠** `{yt_url}`"
         if os.path.exists(dir):
-            return yt_image, dir, capy
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.send_audio(audio=open(dir, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
+                           reply_to_message_id=msg_id)
+            os.remove(yt_image)
+            os.remove(dir)
         elif os.path.exists(dir1):
-            return yt_image, dir1, capy
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.send_audio(audio=open(dir1, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
+                           reply_to_message_id=msg_id)
+            os.remove(yt_image)
+            os.remove(dir1)
         else:
-            return "Somethings Wrong!", "Please Try Again", "ee"
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendMessage(chat_id=chat_id, text="Something's Wrong ! Try Again..", reply_to_message_id=message_id)
 
     except:
         return "Please Try Again"
