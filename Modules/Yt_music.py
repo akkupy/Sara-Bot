@@ -49,13 +49,13 @@ def yt_music(song_name,chat_id,msg_id,bot):
             os.remove(yt_image)
             os.remove(dir)
         elif os.path.exists(dir1):
-            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
             bot.send_audio(audio=open(dir1, 'rb'), thumb=yt_image, caption=capy, chat_id=chat_id,
                            reply_to_message_id=msg_id)
             os.remove(yt_image)
             os.remove(dir1)
         else:
-            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendChatAction(chat_id=chat_id, action="Uploading Audio")
             bot.sendMessage(chat_id=chat_id, text="Demn", reply_to_message_id=msg_id)
 
     except:
