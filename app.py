@@ -23,8 +23,8 @@ class Reply:
         self.message=message
     def para(self):
         bot_welcome=intro()
-        bot.sendChatAction(chat_id=chat_id, action="typing")
-        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+        bot.sendChatAction(chat_id=self.chat_id, action="typing")
+        bot.sendMessage(chat_id=self.chat_id, text=bot_welcome, reply_to_message_id=self.message_id)
 
 
 
