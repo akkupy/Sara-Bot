@@ -30,33 +30,32 @@ class Reply:
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
-    try:
-        update = telegram.Update.de_json(request.get_json(force=True), bot)
+    #try:
+    update = telegram.Update.de_json(request.get_json(force=True), bot)
 
-        chat_id = update.message.chat.id
-        msg_id = update.message.message_id
-        text = update.message.text.encode('utf-8').decode()
+    chat_id = update.message.chat.id
+    msg_id = update.message.message_id
+    text = update.message.text.encode('utf-8').decode()
 
-        if text == "/start":
-            welcome = Reply(chat_id, msg_id, text, intro())
-            welcome.para()
+    if text == "/start":
+        welcome = Reply(chat_id, msg_id, text, intro())
+        welcome.para()
 
-        if text == "/notes":
-            nt = Reply(chat_id, msg_id, text, note())
-            nt.para()
+    if text == "/notes":
+        nt = Reply(chat_id, msg_id, text, note())
+        nt.para()
 
-        if text[0:5] == "/wiki":
-            wk = Reply(chat_id, msg_id, text, wiki(text[6:]))
-            wk.para()
+    if text[0:5] == "/wiki":
+        wk = Reply(chat_id, msg_id, text, wiki(text[6:]))
+        wk.para()
 
-        if text[0:9] == "/yt_music":
-            yt_music(text[10:], chat_id, msg_id, bot)
+    if text[0:9] == "/yt_music":
+        yt_music(text[10:], chat_id, msg_id, bot)
 
-        # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
-        # bot.sendPhoto(chat_id=chat_id, photo=url, reply_to_message_id=msg_id)
+    # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
+    # bot.sendPhoto(chat_id=chat_id, photo=url, reply_to_message_id=msg_id)
 
-
-        return 'ok'
+    return 'ok'
     #except:
         #bot.sendMessage(chat_id=chat_id, text="There was a problem in the name you used, please enter different name", reply_to_message_id=msg_id)
 
