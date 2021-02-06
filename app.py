@@ -23,9 +23,9 @@ class Reply:
         self.cmd=cmd
 
     def para(self):
-        bot_welcome = self.cmd
+        cnt = self.cmd
         bot.sendChatAction(chat_id=self.chat_id, action="typing")
-        bot.sendMessage(chat_id=self.chat_id, text=bot_welcome, reply_to_message_id=self.message_id)
+        bot.sendMessage(chat_id=self.chat_id, text=cnt, reply_to_message_id=self.message_id)
 
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
@@ -41,12 +41,8 @@ def respond():
         welcome.para()
 
     if text == "/notes":
-        n#t=Reply(chat_id,msg_id,text)
-
-        bot_notes = note()
-
-        bot.sendChatAction(chat_id=chat_id, action="typing")
-        bot.sendMessage(chat_id=chat_id, text=bot_notes, reply_to_message_id=msg_id)
+        nt=Reply(chat_id,msg_id,text,note())
+        nt.para()
 
     if text[0:5] == "/wiki":
         Wiki = wiki(text[6:])
