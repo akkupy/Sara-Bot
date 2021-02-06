@@ -23,7 +23,7 @@ class Reply:
         self.cmd=cmd
 
     def para(self):
-        bot_welcome = cmd
+        bot_welcome = self.cmd
         bot.sendChatAction(chat_id=self.chat_id, action="typing")
         bot.sendMessage(chat_id=self.chat_id, text=bot_welcome, reply_to_message_id=self.message_id)
 
