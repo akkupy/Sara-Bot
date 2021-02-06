@@ -59,5 +59,6 @@ def yt_music(song_name,chat_id,msg_id,bot):
             bot.sendMessage(chat_id=chat_id, text="Something's Wrong ! Try Again..", reply_to_message_id=msg_id)
 
     except:
-        return "Please Try Again"
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendMessage(chat_id=chat_id, text="Something's Wrong ! Try Again..", reply_to_message_id=msg_id)
 
