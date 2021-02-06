@@ -6,6 +6,9 @@ from Modules.Intro_Notes import intro, note
 from Modules.Wiki import wiki
 from Modules.Yt_music import yt_music
 from Modules.credentials import *
+
+
+
 global bot
 global TOKEN
 TOKEN = bot_token
@@ -13,32 +16,39 @@ bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
 
+class Reply(intro()):
+    def __init__(self,chat_id,message_id,message):
+        self.chat_id=chat_id
+        self.message_id=message_id
+        self.message=message
+    def para(self):
+        bot_welcome=intro()
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+
+
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
-    # Retrieve the message in JSON and then transform it to Telegram object
+
     update = telegram.Update.de_json(request.get_json(force=True), bot)
 
     chat_id = update.message.chat.id
     msg_id = update.message.message_id
-
-    # Telegram understands UTF-8, so encode text for unicode compatibility
     text = update.message.text.encode('utf-8').decode()
 
-    # For Debug
-    print("Text Received :", text)
 
     # Welcoming Message
     if text == "/start":
-        # print the welcoming message
-        bot_welcome = intro()
+        welcome=Reply(chat_id,msg_id,text)
+        welcome.para()
+        #bot_welcome = intro()
 
-
-        # send the welcoming message
-        bot.sendChatAction(chat_id=chat_id, action="typing")
-        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
+        #bot.sendChatAction(chat_id=chat_id, action="typing")
+        #bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
 
     if text == "/notes":
+
         bot_notes = note()
 
 
