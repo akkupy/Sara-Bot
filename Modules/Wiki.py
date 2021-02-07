@@ -1,7 +1,7 @@
 import wikipediaapi
 import wikipedia
 
-def wiki(name):
+def wiki(name,chat_id,msg_id,bot):
     try:
         global Sub
         Sub = name
@@ -19,11 +19,14 @@ def wiki(name):
             Title = page_py.title
             # Content
             Content = Title + '\n' + wikipedia.summary(Sub, sentences=5) + '\n' + page_py.fullurl
-            return Content
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendMessage(chat_id=chat_id, text=Content, reply_to_message_id=msg_id)
         else:
-            return 'Not Found On Wiki'
+            bot.sendChatAction(chat_id=chat_id, action="typing")
+            bot.sendMessage(chat_id=chat_id, text="Not Found On Wiki", reply_to_message_id=msg_id)
     except:
-        return "Wiki Encountered an Error! Try Again"
+        bot.sendChatAction(chat_id=chat_id, action="typing")
+        bot.sendMessage(chat_id=chat_id, text="Wiki Encountered an Error! Try Again", reply_to_message_id=msg_id)
 
 
 

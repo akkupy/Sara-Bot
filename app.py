@@ -46,8 +46,7 @@ def respond():
             nt.para()
 
         if text[0:5] == "/wiki":
-            wk = Reply(chat_id, msg_id, text, wiki(text[6:]))
-            wk.para()
+            wiki(text[6:],chat_id,msg_id,bot)
 
         if text[0:9] == "/yt_music":
             yt_music(text[10:], chat_id, msg_id, bot)
