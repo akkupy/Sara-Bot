@@ -44,7 +44,6 @@ def yt_music(song_name, chat_id, msg_id, bot):
                                 reply_to_message_id=msg_id)
                 bot.sendMessage(chat_id=chat_id, text=yt_url, reply_to_message_id=msg_id)
                 os.remove(dir)
-                pass
         elif os.path.exists(dir1):
             try:
                 bot.sendChatAction(chat_id=chat_id, action="upload_audio")
