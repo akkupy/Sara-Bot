@@ -1,0 +1,40 @@
+{
+  "name": "Sara-Bot",
+  "description": "A Telegram Bot By Akku",
+  "logo": "https://telegra.ph/file/b4e1e36c6b1fcb32dd997.jpg",
+  "keywords": [
+    "telegram",
+    "sarabot",
+    "plugin",
+    "telegram-sarabot",
+    "productivity"
+  ],
+  "repository": "https://github.com/AkkuPY/Sara-Bot",
+  "website": "starkgang.ml",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING"
+    },
+    "bot_token": {
+      "description": "Enter Telegram Bot Token Here ",
+      "value": ""
+    },
+    "bot_user_name": {
+      "description": "Enter Bot Username Here",
+      "value": ""
+    },
+    "URL": {
+      "description": "Enter Bot URL here",
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ]
+}
