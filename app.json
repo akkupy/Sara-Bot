@@ -25,8 +25,8 @@
       "value": ""
     },
     "URL": {
-      "description": "Enter Bot URL here(https://<app-name>.herokuapp.com/)",
-      "value": ""
+      "description": "Enter Bot URL here(Replace <app-name> with app name given on top most)",
+      "value": "https://<app-name>.herokuapp.com/"
     }
   },
   "addons": [
