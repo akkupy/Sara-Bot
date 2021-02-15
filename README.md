@@ -47,7 +47,6 @@ $ python(3) -m app
 
 ## An Example Of "credentials.py" File
 ```
-import os
 
 bot_token = "sd78g6add897s8d7f875adad768d"
 bot_user_name = "akkubot"
