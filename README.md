@@ -4,7 +4,7 @@
 
 
 # Contact Me
- * 
+ [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/Akku_Legend)
 
 
 
