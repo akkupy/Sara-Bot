@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/Akku_Legend"><img src="http://www.mediafire.com/convkey/e0b1/uqrysirgwgapv8dzg.jpg" width="5000"></a></p> 
+<p align="center"><a href="https://t.me/Akku_Legend"><img src="https://www.mediafire.com/convkey/f0fc/bss731ubfhpfpsqzg.jpg" width="5000"></a></p> 
 <h1 align="center"><b>SARA-BOT  🇮🇳 </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Bot By Akku</h4>
 
