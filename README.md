@@ -34,7 +34,7 @@
  * Config vars(refer [mandatory configs](https://github.com/AkkuPY/Sara-Bot#mandatory-configs)) Based On this Data
  * Deploy
  * Run https://app-name.herokuapp.com/set_webhook on a browser tab (change app-name to the name of heroku app)
- * If it shows webhook setup ok ! You are good to Go
+ * If it shows webhook setup ok ! You are good to Go... Else Try Refreshing after 10 sec+
  * Check if your telegram bot works!
 
 
