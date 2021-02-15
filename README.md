@@ -3,9 +3,6 @@
 <h4 align="center">A Powerful, Smart And Simple Bot By Akku</h4>
 
 
-# Contact Me
- [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/Akku_Legend)
-
 
 
 # KeyFeatures
@@ -77,6 +74,10 @@ bot_token = "sd78g6add897s8d7f875adad768d"
 bot_user_name = "akkubot"
 URL = "https://akkubot45646.herokuapp.com"
 ```
+
+
+# Contact Me
+ [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/Akku_Legend)
 
 
 # Licence
