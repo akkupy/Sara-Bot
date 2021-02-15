@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/fridayot"><img src="http://www.mediafire.com/view/uqrysirgwgapv8d/Banner_-_Sara_bot.jpg/file" width="5000"></a></p> 
+<p align="center"><a href="https://t.me/fridayot"><img src="http://www.mediafire.com/convkey/e0b1/uqrysirgwgapv8dzg.jpg" width="5000"></a></p> 
 <h1 align="center"><b>Sara Telegram Bot</b></h1>
 <h4 align="center">A Powerful, Smart And Simple Bot By Akku</h4>
 
