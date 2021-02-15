@@ -1,6 +1,10 @@
-<p align="center"><a href="https://t.me/fridayot"><img src="http://www.mediafire.com/convkey/e0b1/uqrysirgwgapv8dzg.jpg" width="5000"></a></p> 
+<p align="center"><a href="https://t.me/Akku_Legend"><img src="http://www.mediafire.com/convkey/e0b1/uqrysirgwgapv8dzg.jpg" width="5000"></a></p> 
 <h1 align="center"><b>SARA-BOT  🇮🇳 </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Bot By Akku</h4>
+
+
+# Contact Me
+ * 
 
 
 
@@ -24,7 +28,17 @@
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AkkuPY/Sara-Bot)
 
+# Steps To Follow On Heroku
 
+ * Click Deploy To Heroku
+ * Fill up the App name
+ * Create a Bot with Botfather on telegram(https://t.me/BotFather)
+ * Retreive The Api ID and Bot User Name From BotFather
+ * Config vars(refer mandatory configs) Based On this Data
+ * Deploy
+ * Run https://<app-name>.herokuapp.com/set_webhook on a browser tab (change <app-name> to the name of heroku app)
+ * If it shows webhook setup ok ! You are good to Go
+ * Check if your telegram bot works!
 
 
 # Self-hosting (For Devs)
