@@ -34,7 +34,7 @@
  * Fill up the App name
  * Create a Bot with Botfather on telegram(https://t.me/BotFather)
  * Retreive The Api ID and Bot User Name From BotFather
- * Config vars(refer ![mandatory configs](https://t.me/Akku_Legend)) Based On this Data
+ * Config vars(refer [mandatory configs](https://github.com/AkkuPY/Sara-Bot#mandatory-configs)) Based On this Data
  * Deploy
  * Run https://<app-name>.herokuapp.com/set_webhook on a browser tab (change <app-name> to the name of heroku app)
  * If it shows webhook setup ok ! You are good to Go
