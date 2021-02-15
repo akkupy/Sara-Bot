@@ -80,7 +80,7 @@ URL = "https://akkubot45646.herokuapp.com"
  [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/Akku_Legend)
 
 
-# Licence
+# License
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 
 SaraBot is Free Software: You can use, study share and improve it at your
