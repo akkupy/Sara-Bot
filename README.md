@@ -36,7 +36,7 @@ $ python(3) -m app
 
 # Mandatory Configs
 ```
-[+] If You Running Sara On A Deploy Services With Config Env Support Like Heroku, Zeet.co, Please Set "ENV" To True , Else For Self Host Services Like Digital Ocean Just Make A Local Config And Put Vars Given Below.
+[+] If You Running Sara On A Deploy Services With Config Env Support Like Heroku, Zeet.co, Please Set "ENV" To True , Else For Self Host Services Like Digital Ocean Just Make A Credentials File And Put Vars Given Below.
     [-] bt_token:   Telegram Bot Token 
     [-] bot_user_name :   Telegram Bot UserName
     [-] URL : For WebHook(https://<app-name>.herokuapp.com/)
