@@ -1,9 +1,14 @@
-def intro():
+def intro(chat_id,message_id,bot):
+    img="https://raw.githubusercontent.com/AkkuPY/Sara-Bot/main/Assets/Sara_Bot.jpg"
     a='''Heyy I'm Sara, Created By AkkuPY @Akku_Legend " 
 Type in /notes to know my True Potential!!!'''
-    return a
+    bot.sendChatAction(chat_id=chat_id, action="typing")
+    #bot.sendMessage(chat_id=chat_id, text=a, reply_to_message_id=message_id)
+    bot.sendPhoto(chat_id=chat_id, photo=img, caption=a,reply_to_message_id = message_id)
 
-def note():
+
+
+def note(chat_id,message_id,bot):
     b='''Here Are The List Of Features Currently I Have.
 Type in /<Command> To get the desired result.
                              
@@ -12,4 +17,5 @@ Type in /<Command> To get the desired result.
 
 More Are On the way!              
 Admin:@Akku_Legend '''
-    return b
+    bot.sendChatAction(chat_id=chat_id, action="typing")
+    bot.sendMessage(chat_id=chat_id, text=b, reply_to_message_id=message_id)

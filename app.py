@@ -15,18 +15,6 @@ bot = telegram.Bot(token=TOKEN)
 app = Flask(__name__)
 
 
-class Reply:
-    def __init__(self, chat_id, message_id, message,cmd):
-        self.chat_id = chat_id
-        self.message_id = message_id
-        self.message = message
-        self.cmd=cmd
-
-    def para(self):
-        cnt = self.cmd
-        bot.sendChatAction(chat_id=self.chat_id, action="typing")
-        bot.sendMessage(chat_id=self.chat_id, text=cnt, reply_to_message_id=self.message_id)
-
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -38,12 +26,10 @@ def respond():
         text = update.message.text.encode('utf-8').decode()
 
         if text == "/start":
-            welcome = Reply(chat_id, msg_id, text, intro())
-            welcome.para()
+            intro(chat_id,msg_id,bot)
 
         if text == "/notes":
-            nt = Reply(chat_id, msg_id, text, note())
-            nt.para()
+            note(chat_id,msg_id,bot)
 
         if text[0:5] == "/wiki":
             wiki(text[6:],chat_id,msg_id,bot)
@@ -52,7 +38,7 @@ def respond():
             yt_music(text[10:], chat_id, msg_id, bot)
 
         # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
-        # bot.sendPhoto(chat_id=chat_id, photo=url, reply_to_message_id=msg_id)
+        #bot.sendPhoto(chat_id=chat_id, photo=url,caption="df" reply_to_message_id=msg_id)
 
         return 'ok'
     except:
