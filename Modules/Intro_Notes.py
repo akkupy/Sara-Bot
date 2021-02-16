@@ -1,9 +1,8 @@
 def intro(chat_id,message_id,bot):
     img="https://raw.githubusercontent.com/AkkuPY/Sara-Bot/main/Assets/Sara_Bot.jpg"
-    a='''Heyy I'm Sara, Created By AkkuPY @Akku_Legend " 
+    a='''Heyy I'm Sara, Created By AkkuPY @Akku_Legend  
 Type in /notes to know my True Potential!!!'''
     bot.sendChatAction(chat_id=chat_id, action="typing")
-    #bot.sendMessage(chat_id=chat_id, text=a, reply_to_message_id=message_id)
     bot.sendPhoto(chat_id=chat_id, photo=img, caption=a,reply_to_message_id = message_id)
 
 
