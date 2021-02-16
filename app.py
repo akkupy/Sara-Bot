@@ -1,10 +1,6 @@
 # importing
-import os
 import telegram
 from flask import Flask, request
-from Modules.Intro_Notes import intro, note
-from Modules.Wiki import wiki
-from Modules.Yt_music import yt_music
 from Modules.credentials import *
 
 global bot
@@ -26,19 +22,20 @@ def respond():
         text = update.message.text.encode('utf-8').decode()
 
         if text == "/start":
+            from Modules.Intro_Notes import intro
             intro(chat_id,msg_id,bot)
 
         if text == "/notes":
+            from Modules.Intro_Notes import note
             note(chat_id,msg_id,bot)
 
         if text[0:5] == "/wiki":
+            from Modules.Wiki import wiki
             wiki(text[6:],chat_id,msg_id,bot)
 
         if text[0:9] == "/yt_music":
+            from Modules.Yt_music import yt_music
             yt_music(text[10:], chat_id, msg_id, bot)
-
-        # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
-        #bot.sendPhoto(chat_id=chat_id, photo=url,caption="df" reply_to_message_id=msg_id)
 
         return 'ok'
     except:
