@@ -37,9 +37,6 @@ def respond():
         if text[0:9] == "/yt_music":
             yt_music(text[10:], chat_id, msg_id, bot)
 
-        # bot.sendChatAction(chat_id=chat_id, action="upload_photo")
-        #bot.sendPhoto(chat_id=chat_id, photo=url,caption="df" reply_to_message_id=msg_id)
-
         return 'ok'
     except:
         bot.sendMessage(chat_id=chat_id, text="Something Fishy.. Give another Try", reply_to_message_id=msg_id)
