@@ -3,6 +3,19 @@ import os
 import glob
 
 
+#     __       _       _           
+#    /  \     | |     | | 
+#   /    \    | | /\  | | /\   _   _
+#  /  /\  \   | |/ /  | |/ /  | | | |  
+# /  ____  \  | |\ \  | |\ \  | |_| |
+#/__/    \__\ |_| \_\ |_| \_\  \___/
+#
+# Copyright of Akash, 2021          
+# https://www.github.com/AkkuPY     
+# https://t.me/Akku_Legend         
+
+
+
 def yt_music(song_name, chat_id, msg_id, bot):
     try:
         videosSearch = VideosSearch(song_name, limit=1)

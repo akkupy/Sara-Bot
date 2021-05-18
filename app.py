@@ -11,11 +11,9 @@ from Modules.credentials import *
 # /  ____  \  | |\ \  | |\ \  | |_| |
 #/__/    \__\ |_| \_\ |_| \_\  \___/
 #
-#*************************************
 # Copyright of Akash, 2021          
 # https://www.github.com/AkkuPY     
-# https://t.me/Akku_Legend         
-#*************************************
+# https://t.me/Akku_Legend   
 
 global bot
 global TOKEN

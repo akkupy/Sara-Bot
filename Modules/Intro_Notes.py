@@ -1,3 +1,20 @@
+
+#     __       _       _           
+#    /  \     | |     | | 
+#   /    \    | | /\  | | /\   _   _
+#  /  /\  \   | |/ /  | |/ /  | | | |  
+# /  ____  \  | |\ \  | |\ \  | |_| |
+#/__/    \__\ |_| \_\ |_| \_\  \___/
+#
+# Copyright of Akash, 2021          
+# https://www.github.com/AkkuPY     
+# https://t.me/Akku_Legend   
+
+
+
+
+
+
 def intro(chat_id,message_id,bot):
     img="https://raw.githubusercontent.com/AkkuPY/Sara-Bot/main/Assets/Sara_Bot.jpg"
     a='''Heyy I'm Sara, Created By AkkuPY @Akku_Legend  
