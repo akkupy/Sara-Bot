@@ -49,7 +49,7 @@ $ cd Sara-Bot
 # Config Virtual Env (Skip is already Done.)
 $ virtualenv -p /usr/bin/python3 venv
 $ . ./venv/bin/activate
-# Install All Requirements 
+# Install All Requirements.
 $ pip(3) install -r requirements.txt
 # Create credentials.py with variables as given below
 # Start Bot 
