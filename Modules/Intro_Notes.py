@@ -8,7 +8,7 @@
 #
 # Copyright of Akash, 2021          
 # https://www.github.com/akkupy    
-# https://t.me/Akku_Legend   
+# https://t.me/akkupy  
 
 
 

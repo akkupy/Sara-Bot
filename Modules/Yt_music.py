@@ -11,8 +11,8 @@ import glob
 #/__/    \__\ |_| \_\ |_| \_\  \___/
 #
 # Copyright of Akash, 2021          
-# https://www.github.com/AkkuPY     
-# https://t.me/Akku_Legend         
+# https://www.github.com/akkupy   
+# https://t.me/akkupy        
 
 
 
