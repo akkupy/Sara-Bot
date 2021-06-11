@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/Akku_Legend"><img src="https://github.com/AkkuPY/Sara-Bot/blob/main/Assets/Sara_Bot.jpg" width="5000"></a></p> 
+<p align="center"><a href="https://akkupy.github.io"><img src="https://github.com/akkupy/Sara-Bot/blob/main/Assets/Sara_Bot.jpg" width="5000"></a></p> 
 <h1 align="center"><b>SARA-BOT  🇮🇳 </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Telegram Bot By Akku</h4>
 
@@ -23,7 +23,7 @@
 
 # Deploying To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AkkuPY/Sara-Bot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/akkupy/Sara-Bot)
 
 # Steps To Follow On Heroku
 
@@ -31,7 +31,7 @@
  * Fill up the App name
  * Create a Bot with Botfather on telegram(https://t.me/BotFather)
  * Retreive The Api ID and Bot User Name From BotFather
- * Config vars(refer [mandatory configs](https://github.com/AkkuPY/Sara-Bot#mandatory-configs)) Based On this Data
+ * Config vars(refer [mandatory configs](https://github.com/akkupy/Sara-Bot#mandatory-configs)) Based On this Data
  * Deploy
  * Run https://app-name.herokuapp.com/set_webhook on a browser tab (change app-name to the name of heroku app)
  * If it shows webhook setup ok ! You are good to Go... Else Try Refreshing after 10 sec+
@@ -43,7 +43,7 @@
 ## Simply clone the repository and run the main file:
 ```sh
 # Install Git First // (Else You Can Download And Upload to Your Local Server)
-$ git clone https://github.com/AkkuPY/Sara-Bot
+$ git clone https://github.com/akkupy/Sara-Bot
 # Open Git Cloned File
 $ cd Sara-Bot
 # Config Virtual Env (Skip is already Done.)
@@ -77,7 +77,7 @@ URL = "https://akkubot45646.herokuapp.com"
 
 
 # Contact Me
- [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/Akku_Legend)
+ [![telegram](https://img.shields.io/badge/Akku-000000?style=for-the-badge&logo=telegram)](https://t.me/akkupy)
 
 
 # License
