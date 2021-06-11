@@ -51,7 +51,7 @@ $ virtualenv -p /usr/bin/python3 venv
 $ . ./venv/bin/activate
 # Install All Requirements.
 $ pip(3) install -r requirements.txt
-# Create credentials.py with variables as given below
+# Replace credentials.py with variables as given below in Modules folder
 # Start Bot 
 $ python(3) -m app
 ```
