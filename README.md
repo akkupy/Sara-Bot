@@ -3,8 +3,6 @@
 <h4 align="center">A Powerful, Smart And Simple Telegram Bot By Akku</h4>
 
 
-
-
 # KeyFeatures
 
 * Wiki Searching
@@ -14,9 +12,6 @@
 * Customizable.
 * Much Cleaner And Stable.
 * Daily Maintained.
-
-
-
 
 
 
