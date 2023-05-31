@@ -2,4 +2,5 @@
 /.idea
 /venv
 /Modules/__pycache__
-
+.env
+/__pycache__

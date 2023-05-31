@@ -1,8 +1,7 @@
 # importing
 import telegram
 from flask import Flask, request
-from Modules.credentials import *
-
+from dotenv import load_dotenv,find_dotenv
 
 #     __       _       _           
 #    /  \     | |     | | 
@@ -14,6 +13,16 @@ from Modules.credentials import *
 # Copyright of Akash, 2021          
 # https://www.github.com/akkupy     
 # https://t.me/akkupy  
+
+
+import os
+
+load_dotenv(find_dotenv())
+
+bot_token = os.getenv("BOT_TOKEN")
+bot_user_name = os.getenv("BOT_NAME")
+URL = os.getenv("URL")
+
 
 global bot
 global TOKEN
@@ -70,4 +79,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(threaded=True)
+    app.run(threaded=True,port=80)
